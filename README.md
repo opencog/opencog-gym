@@ -1,3 +1,7 @@
+# Rational OpenCog Controlled Agent
+> Use OpenCog to control a rational agent in OpenAI Gym and Malmo environments.
+
+
 OpenCog wrapper around OpenAI Gym.
 
 Highly experimental at this stage.
@@ -31,15 +35,14 @@ Third party tools
 
 ## Install
 
-In the root folder enter the following command
+In the root folder enter the following command:
 
 ```bash
-pip install .
+pip install -e .
 ```
 
-## Usage
+## How to use
 
-For now a gym agent defined under the `agent` folder is provided that
+For now a gym agent defined under the `rocca/agents` folder is provided that
 can used to implement agents for given environments.  See the examples
 under the `examples` folder.
-
