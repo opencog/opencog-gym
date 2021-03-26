@@ -63,3 +63,9 @@ tools/fastai
 
 # link checker
 checklink/cookies.txt
+
+# Sphinx documentation
+docs/_build/
+
+# mkdocs documentation
+/site
