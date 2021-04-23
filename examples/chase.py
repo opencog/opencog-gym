@@ -14,9 +14,9 @@ from opencog.pln import *
 from opencog.ure import ure_logger
 
 # OpenCog Gym
-from agent.OpencogAgent import OpencogAgent
-from agent.utils import *
-from envs.wrappers import GymWrapper
+from rocca.agents import OpencogAgent
+from rocca.agents.utils import *
+from rocca.envs.wrappers import GymWrapper
 
 env = gym.make('Chase-v0')
 # Uncomment the following to get a description of env
@@ -91,6 +91,7 @@ class ChaseAgent(OpencogAgent):
 
 if __name__ == "__main__":
     # Init loggers
+    log = create_logger("opencog.log")
     log.set_level("debug")
     log.set_sync(False)
     agent_log.set_level("fine")
