@@ -27,8 +27,6 @@ Third party tools
 - fastcore https://fastcore.fast.ai
 - OpenAI Gym https://gym.openai.com/
 - MineRL https://minerl.io
-  - In the current release there is a trivial bug that prevents Minecraft from building, go to `.../site-packages/minerl/env/Malmo/Minecraft/build.gradle` and
-    edit line 73 such that the URL uses HTTPS protocol (https://github.com/minerllabs/minerl/issues/450#issuecomment-777009360).
 - nbdev https://nbdev.fast.ai
 
 ## Install
@@ -73,10 +71,3 @@ Running the provided configuration will start a JupyterLab instance that will be
 
 There is also the `.devcontainer/docker-compose-custom.yml` that you can use to add your own configuration, matching your
 personal needs.
-
-Should you want to include your personal configuration without committing it to the repository, use the following Git command
-to ignore the changes:
-
-```bash
-git update-index --skip-worktree <path/to/file>
-```
