@@ -1,0 +1,20 @@
+# Usage: Follow the steps in the README file in the directory containing this file
+version: "3"
+services:
+    workspace:
+        image: synthillect/opencog-minerl
+        user: opencog
+        ports:
+            - "8888:8888"
+            - "5901:5901"
+            - "6901:6901"
+        volumes:
+            - ..:/workspace:cached
+            - ~/.ccache:/home/opencog/.ccache # for persisting ccache artifacts
+        environment:
+            - CCACHE_DIR=/home/opencog/.ccache
+            - PGHOST=db # This should be the same as the link's alias
+            - PGUSER=opencog_user # user created by configure-database.sh
+            - TZ=$TZ # set this to your timezone
+        working_dir: /workspace
+        command: jupyter lab --ip="0.0.0.0" --no-browser --ServerApp.token='' --ServerApp.password=''
